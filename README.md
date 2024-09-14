@@ -37,3 +37,14 @@ Port,Protocol,Count
 <port> <protocol> <count>
 ...
 ```
+
+## Assumptions
+1. Assume input log file is `.txt` in `UTF-8` encoding
+2. Assume input lookupTable file is in `UTF-8` encoding
+3. Assume log only has 3 protocols: `ICMP(1)`, `TCP(6)`, and `UDP(17)`
+
+## Build and Run
+1. Make sure the local machine has java21 installed
+2. (Optional) run `mvn clean install`
+3. run `java -jar Assessment-1.0-SNAPSHOT-jar-with-dependencies.jar <flow_log_file>.txt <lookup_table_file>.csv`  
+   example: `java -jar Assessment-1.0-SNAPSHOT-jar-with-dependencies.jar logs.txt lookup.csv`
